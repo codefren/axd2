@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-hh6tiywfio9phvtj65a0^z03%mn=2col^-q)1(x2v5qu2qps6_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'RENDER' not in os.environ
 DEBUG = False
+
 if not DEBUG:    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
